@@ -1,0 +1,18 @@
+# Ignore virtual environments
+multilingual-env/
+
+# Ignore cache and system files
+__pycache__/
+*.pyc
+
+# Ignore FAISS large binary indexes (optional if stored remotely)
+*.idx
+*.npy
+
+# Ignore pickle files (optional)
+*.pkl
+# Ignore Python virtual environments
+tedenv/
+
+# Ignore large local datasets
+*.csv
