@@ -8,7 +8,11 @@ from sentence_transformers import SentenceTransformer
 # -------------------------------
 # 🔹 Load SentenceTransformer model
 # -------------------------------
-model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device='cuda')
+import torch
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2", device=device)
+
 
 # -------------------------------
 # 🔹 Load TED FAISS index + metadata
